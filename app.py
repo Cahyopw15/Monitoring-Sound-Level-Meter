@@ -37,17 +37,17 @@ while True:
             go.Contour(
                 z = z,
                 contours = dict(
-                    coloring ='seismic',
+                    coloring ='jet',
                     showlabels = True,
                     labelfont = dict(
-                        size = 6,
+                        size = 10,
                         color = 'black',
                     )
                 )
             ))
             for j in range(4):
                 for k in range(4):
-                    fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=16, font_color='white')
+                    fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=16, font_color='black')
             fig.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig, theme="streamlit")
             fig_surface = go.Figure(data=[go.Surface(z=z)])
