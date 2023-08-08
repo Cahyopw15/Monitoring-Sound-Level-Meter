@@ -37,7 +37,7 @@ while True:
             go.Contour(
                 z = z,
                 contours = dict(
-                    coloring ='jet',
+                    coloring ='heatmap',
                     showlabels = True,
                     labelfont = dict(
                         size = 10,
