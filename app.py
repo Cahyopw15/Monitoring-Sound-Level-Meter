@@ -33,18 +33,19 @@ while True:
         with placeholder.container():
             df = convert_dict_to_df(rows['data']).sort_values(by=["id_kebisingan"])
             z = df.iloc[0:4, 1:5].values
+            colorscale = [[0,'gold'], [0.5, 'mediumturquoise'],[1,'lightsalmon]]
             fig = go.Figure(data=
             go.Contour(
-                z = z,
+                z = z, 
                 contours = dict(
-                    coloring ='seismic',
+                    coloring ='heatmap',
                     showlabels = True,
                     labelfont = dict(
                         size = 10,
                         color = 'black',
                     )
-                )
-            ))
+                ) , 
+           colorscale = colorscale ))
             for j in range(4):
                 for k in range(4):
                     fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
