@@ -15,7 +15,7 @@ def init_connection():
 
 @st.cache_data(ttl=15)
 def run_query():
-    return supabase.table("mytable").select("*").order("kebisingan", desc=True).limit(4).execute()
+    return supabase.table("kebisingan1").select("*").order("No.", desc=True).limit(4).execute()
 
 def convert_dict_to_df(data):
     df = pd.DataFrame.from_dict(data)
@@ -31,7 +31,7 @@ while True:
     rows = json.loads(rows)
     if len(rows['data']) == 4:
         with placeholder.container():
-            df = convert_dict_to_df(rows['data']).sort_values(by=["kebisingan"])
+            df = convert_dict_to_df(rows['data']).sort_values(by=["No."])
             z = df.iloc[0:4, 1:5].values
             st.write(z)
             fig = go.Figure(data=
