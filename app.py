@@ -33,16 +33,15 @@ while True:
         with placeholder.container():
             df = convert_dict_to_df(rows['data']).sort_values(by=["id_kebisingan"])
             z = df.iloc[0:4, 1:5].values
-            st.write(z)
             fig = go.Figure(data=
             go.Contour(
                 z = z,
                 contours = dict(
-                    coloring ='heatmap',
+                    coloring ='seismic',
                     showlabels = True,
                     labelfont = dict(
-                        size = 10,
-                        color = 'white',
+                        size = 6,
+                        color = 'black',
                     )
                 )
             ))
