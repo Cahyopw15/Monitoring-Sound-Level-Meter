@@ -33,7 +33,7 @@ while True:
         with placeholder.container():
             df = convert_dict_to_df(rows['data']).sort_values(by=["id_kebisingan"])
             z = df.iloc[0:4, 1:5].values
-            colorscale = [[0,'darkviolet'], [0.5, 'yellowgreen'],[1,'red']]
+            colorscale = [[0, 'darkviolet'], [0.5, 'yellowgreen'], [1, 'red']]
             fig = go.Figure(data=
             go.Contour(
                 z = z, 
@@ -45,7 +45,8 @@ while True:
                         color = 'black',
                     )
                 ) , 
-           colorscale = colorscale ))
+           colorscale = colorscale )
+                           )
             for j in range(4):
                 for k in range(4):
                     fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
