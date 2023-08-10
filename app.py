@@ -39,31 +39,29 @@ if option == 'Home':
             rows = rows.model_dump_json()
             rows = json.loads(rows)
             if len(rows['data']) == 4:
-                with placeholder.container():
-                    df = convert_dict_to_df(rows['data']).sort_values(by=["id_kebisingan"])
-                    z = df.iloc[0:4, 1:5].values
-                    colorscale = [[0, 'darkviolet'], [0.5, 'yellowgreen'], [1, 'red']]
-                    fig = go.Figure(data=
-                        go.Contour(
-                            z = z, 
-                            contours = dict(
-                                coloring ='heatmap',
-                                showlabels = True,
-                                labelfont = dict(
-                                    size = 10,
-                                    color = 'black',
-                                )
-                            ) , 
-                       colorscale = colorscale )
-                                       )
-                    for j in range(4):
-                        for k in range(4):
-                             fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
-                    fig.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-                    st.plotly_chart(fig, theme="streamlit")
+                df = convert_dict_to_df(rows['data']).sort_values(by=["id_kebisingan"])
+                z = df.iloc[0:4, 1:5].values
+                colorscale = [[0, 'darkviolet'], [0.5, 'yellowgreen'], [1, 'red']]
+                fig = go.Figure(data=
+                    go.Contour(
+                        z = z, 
+                        contours = dict(
+                            coloring ='heatmap',
+                            showlabels = True,
+                            labelfont = dict(
+                                size = 10,
+                                color = 'black',
+                            )
+                         ) , 
+                    colorscale = colorscale )
+                                    )
+                for j in range(4):
+                    for k in range(4):
+                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
+                fig.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
+                st.plotly_chart(fig, theme="streamlit")
             else:
-                with placeholder.container():
-                    st.write("Not Enough Data!")
+                st.write("Not Enough Data!")
             time.sleep(1)
     with fig_col2 :
         fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
