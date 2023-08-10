@@ -24,13 +24,8 @@ def convert_dict_to_df(data):
 st.title("Real-Time Monitoring Kebisingan Dashboard")
 
 st.sidebar.header('Dashboard Monitoring Kebisingan')
-st.sidebar.subheader('Kebisingan Parameter')
-option = st.sidebar.selectbox(
-    'Silakan pilih menu:',
-    ('Home', 'About')
-)
-if option == 'Home':
-        while True:
+    placeholder = st.empty()    
+    while True:
             supabase = init_connection()
             rows = run_query()
             rows = rows.model_dump_json()
