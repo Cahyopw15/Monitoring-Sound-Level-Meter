@@ -61,7 +61,7 @@ if option == 'Home':
                     fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
                     fig_surface.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', width=750, height=750)
                     st.plotly_chart(fig_surface, theme="streamlit")
-             else:
+            else:
                  with placeholder.container():
                         st.write("Not Enough Data!")
             time.sleep(1)
