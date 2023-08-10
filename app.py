@@ -30,9 +30,6 @@ option = st.sidebar.selectbox(
     ('Home', 'About')
 )
 if option == 'Home':
-    fig_col1, fig_col2 = st.columns(2)
-    with fig_col1 :
-        st.write("""# Topografi 2D""")
         while True:
             supabase = init_connection()
             rows = run_query()
@@ -59,11 +56,10 @@ if option == 'Home':
                     for k in range(4):
                          fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
                 fig.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-                st.plotly_chart(fig, theme="streamlit")
-            else:
+                st.plotly_chart(fig, theme="streamlit") 
+                fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
+                fig_surface.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', width=750, height=750)
+                st.plotly_chart(fig_surface, theme="streamlit")
+             else:
                 st.write("Not Enough Data!")
             time.sleep(1)
-    with fig_col2 :
-        fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
-        fig_surface.update_layout(margin=dict(l=10, r=10, b=10, pad=10), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', width=750, height=750)
-        st.plotly_chart(fig_surface, theme="streamlit")
