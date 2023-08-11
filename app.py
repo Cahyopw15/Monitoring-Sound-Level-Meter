@@ -54,7 +54,7 @@ while True:
                 fig.update_layout(margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
-                fig_surface.update_layout(margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', width=750, height=750)
+                fig_surface.update_layout(width=500, height=500, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
         else:
             with placeholder.container():
