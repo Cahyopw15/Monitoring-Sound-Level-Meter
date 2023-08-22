@@ -32,11 +32,11 @@ option = st.sidebar.selectbox(
 )
 if option == 'Home':
     st.write("home")
-def create_hyperlink(url,label):
-    return f'<a href="{url}" target="_blank">{label}</a>'
+def create_hyperlink(link):
+    js = f"window.open('{link}')"
+    html = f"<script>{js}</script>"
 if st.sidebar.button("Instagram"):
-    open = create_hyperlink("https://instagram.com/", "Kunjungi Situs")
-    st.sidebar.markdown(open, unsafe_allow_html=True)
+    create_hyperlink("https://instagram.com/")
 st.sidebar.subheader('Email')
 st.sidebar.subheader('Github')
 
