@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,8 +7,7 @@ import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
 
-logo = Image.open("https://github.com/Cahyopw15/project/blob/main/Logo_UnivLampung.png")
-st.image(logo, width = 50)
+st.image("https://github.com/Cahyopw15/project/blob/main/Logo_UnivLampung.png", width = 50)
 
 @st.cache_resource
 def init_connection():
