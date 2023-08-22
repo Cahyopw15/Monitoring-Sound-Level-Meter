@@ -23,31 +23,6 @@ def convert_dict_to_df(data):
     
 st.title("Real-Time Monitoring Kebisingan Dashboard")
 
-def main():
-    st.title("Logo di Pojok Kanan Atas dari GitHub")
-
-    # Menambahkan HTML untuk menampilkan logo di pojok kanan atas
-    st.markdown(
-        """
-        <style>
-            .logo-container {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-            }
-        </style>
-        <div class="logo-container">
-            <a href="https://github.com" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="50" height="50">
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-if __name__ == "__main__":
-    main()
-
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 placeholder = st.empty()    
 while True:
