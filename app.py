@@ -6,7 +6,7 @@ import time
 import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
-import webbrowser
+from streamlit.components.v1 import html
 
 st.image("Logo_UnivLampung.png", width = 50)
 
@@ -34,10 +34,14 @@ option = st.sidebar.selectbox(
 if option == 'Home':
     st.write("home")
     
-url='[Instagram] (https://instagram.com/)'
-if st.sidebar.button('Instagram'):
-    url='[Instagram] (https://instagram.com/)'
-    st.markdown(url, unsafe_allow_html = True)
+def open(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank'.focus();
+        </script>
+    """ % (url)
+    html(open_script)
+st.sidebar.button('Instagram', on_click=open, args=('https://instagram.com/',))
 st.sidebar.subheader('Email')
 st.sidebar.subheader('Github')
 
