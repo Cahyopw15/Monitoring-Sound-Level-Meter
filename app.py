@@ -33,10 +33,11 @@ option = st.sidebar.selectbox(
 )
 if option == 'Home':
     st.write("home")
-url='https://instagram.com/'
-if st.sidebar.button('Instagram'):
-    webbrowser.open_new_tab(url)
     
+url='[Instagram] (https://instagram.com/)'
+if st.sidebar.button('Instagram'):
+    url='[Instagram] (https://instagram.com/)'
+    st.markdown(link, unsafe_allow_html = True)
 st.sidebar.subheader('Email')
 st.sidebar.subheader('Github')
 
