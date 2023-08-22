@@ -8,7 +8,7 @@ from supabase import create_client, Client
 import json
 
 logo = "https://github.com/Cahyopw15/project/blob/main/Logo_UnivLampung.png"
-st.image(logo, width = 50, length = 50)
+st.image(logo, width = 50)
 
 @st.cache_resource
 def init_connection():
