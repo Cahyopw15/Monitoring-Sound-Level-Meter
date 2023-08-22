@@ -25,14 +25,6 @@ def convert_dict_to_df(data):
     
 st.title("Real-Time Monitoring Kebisingan Dashboard")
 
-col1,col2 = st.columns(2)
-with col1:
-    st.markdown("### Topografi 2D")
-    
-
-with col2: 
-     st.markdown("### Topografi 3D")
-
 
 placeholder = st.empty()    
 while True:
@@ -74,5 +66,15 @@ while True:
 
 
 st.sidebar.header('Dashboard Monitoring Kebisingan')
+option = st.sidebar.selectbox(
+    'Silakan pilih menu:',
+    ('Home','Topografi 2D','About')
+)
+if option == 'Home':
+    st.write("home")
+
+
+st.sidebar('Instagram')
+
 
      
