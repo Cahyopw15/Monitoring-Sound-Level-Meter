@@ -35,7 +35,7 @@ if option == 'Home':
 def create_hyperlink(url,label):
     return f'<a href="{url}" target="_blank">{label}</a>'
 if st.sidebar.button("Instagram"):
-    open = create_hyperlink("https://instagram.com/")
+    open = create_hyperlink("https://instagram.com/", "Kunjungi Situs")
     st.sidebar.markdown(open, unsafe_allow_html=True)
 st.sidebar.subheader('Email')
 st.sidebar.subheader('Github')
