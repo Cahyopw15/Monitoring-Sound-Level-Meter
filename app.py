@@ -32,9 +32,10 @@ option = st.sidebar.selectbox(
 )
 if option == 'Home':
     st.write("home")
-
-
-st.sidebar('Instagram')
+    
+st.sidebar.subheader('Instagram')
+st.sidebar.subheader('Email')
+st.sidebar.subheader('Github')
 
 
 placeholder = st.empty()    
