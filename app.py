@@ -25,6 +25,13 @@ def convert_dict_to_df(data):
     
 st.title("Real-Time Monitoring Kebisingan Dashboard")
 
+col1,col2 = st.columns(2)
+with col1:
+    st.markdown("### Topografi 2D")
+    
+
+with col2: 
+     st.markdown("### Topografi 3D")
 
 
 placeholder = st.empty()    
@@ -55,10 +62,11 @@ while True:
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
                 fig.update_layout(margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-                
+                st.plotly_chart(fig, theme="streamlit") 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
                 fig_surface.update_layout(width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-                
+                st.plotly_chart(fig_surface, theme="streamlit")
+
         else:
             with placeholder.container():
                 st.write("Not Enough Data!")
@@ -66,11 +74,5 @@ while True:
 
 
 st.sidebar.header('Dashboard Monitoring Kebisingan')
-col1,col2 = st.columns(2)
-with col1:
-    st.markdown("### Topografi 2D")
-    st.plotly_chart(fig, theme="streamlit") 
 
-with col2: 
-     st.markdown("### Topografi 3D")
-     st.plotly_chart(fig_surface, theme="streamlit")
+     
