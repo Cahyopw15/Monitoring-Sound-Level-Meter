@@ -6,7 +6,7 @@ import time
 import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
-
+import webbrowser
 
 st.image("Logo_UnivLampung.png", width = 50)
 
