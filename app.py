@@ -33,7 +33,7 @@ option = st.sidebar.selectbox(
 if option == 'Home':
     st.write("home")
     
-st.sidebar.subheader('Instagram [https://instagram.com/]')
+st.sidebar.subheader('Instagram', [https://instagram.com/])
 st.sidebar.subheader('Email')
 st.sidebar.subheader('Github')
 
