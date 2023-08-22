@@ -6,7 +6,7 @@ import time
 import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
-import webbrowser
+
 
 st.image("Logo_UnivLampung.png", width = 50)
 
@@ -34,7 +34,7 @@ option = st.sidebar.selectbox(
 if option == 'Home':
     st.write("home")
 url='https://instagram.com/'
-if st.sidebar.button("Instagram"):
+if st.sidebar.button('Instagram'):
     webbrowser.open_new_tab(url)
     
 st.sidebar.subheader('Email')
