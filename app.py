@@ -35,6 +35,7 @@ if option == 'Home':
 def create_hyperlink(link):
     js = f"window.open('{link}')"
     html = f"<script>{js}</script>"
+    st.markdown(html, unsafe_allow_html= True)
 if st.sidebar.button("Instagram"):
     create_hyperlink("https://instagram.com/")
 st.sidebar.subheader('Email')
