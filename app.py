@@ -60,3 +60,7 @@ while True:
             with placeholder.container():
                 st.write("Not Enough Data!")
         time.sleep(1)
+
+
+st.sidebar.header('Dashboard Monitoring Kebisingan')
+
