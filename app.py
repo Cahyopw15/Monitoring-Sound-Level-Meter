@@ -33,7 +33,7 @@ option = st.sidebar.selectbox(
 )
 if option == 'Home':
     st.write("home")
-url("https://instagram.com/")
+url='https://instagram.com/'
 if st.sidebar.("Instagram"):
     webbrowser.open_new_tab(url)
     
