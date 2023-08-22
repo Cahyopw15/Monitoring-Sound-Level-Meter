@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
 
-st.image("https://github.com/Cahyopw15/project/blob/main/Logo_UnivLampung.png", width = 50)
+st.image("https://github.com/Cahyopw15/project/blob/main/Logo_UnivLampung.png")
 
 @st.cache_resource
 def init_connection():
