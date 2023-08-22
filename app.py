@@ -1,4 +1,5 @@
 import streamlit as st
+import request
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,7 +9,8 @@ from supabase import create_client, Client
 import json
 
 st.image("Logo_UnivLampung.png", width = 50)
-
+config_url = config.toml
+st.write(config_url)
 @st.cache_resource
 def init_connection():
     url = st.secrets["supabase_url"]
