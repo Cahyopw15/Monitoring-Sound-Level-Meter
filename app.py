@@ -34,7 +34,7 @@ option = st.sidebar.selectbox(
 if option == 'Home':
     st.write("home")
 url='https://instagram.com/'
-if st.sidebar.("Instagram"):
+if st.sidebar.button("Instagram"):
     webbrowser.open_new_tab(url)
     
 st.sidebar.subheader('Email')
