@@ -25,6 +25,17 @@ def convert_dict_to_df(data):
     
 st.title("Real-Time Monitoring Kebisingan Dashboard")
 
+st.sidebar.header('Dashboard Monitoring Kebisingan')
+option = st.sidebar.selectbox(
+    'Silakan pilih menu:',
+    ('Home','Topografi 2D','About')
+)
+if option == 'Home':
+    st.write("home")
+
+
+st.sidebar('Instagram')
+
 
 placeholder = st.empty()    
 while True:
@@ -64,17 +75,6 @@ while True:
                 st.write("Not Enough Data!")
         time.sleep(1)
 
-
-st.sidebar.header('Dashboard Monitoring Kebisingan')
-option = st.sidebar.selectbox(
-    'Silakan pilih menu:',
-    ('Home','Topografi 2D','About')
-)
-if option == 'Home':
-    st.write("home")
-
-
-st.sidebar('Instagram')
 
 
      
