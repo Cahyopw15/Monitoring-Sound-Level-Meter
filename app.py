@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.theme import set_theme_config
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,6 +7,9 @@ import time
 import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
+
+theme_config_url = "https://github.com/Cahyopw15/project/blob/main/config.toml"
+set_theme_config(theme_config_url)
 
 @st.cache_resource
 def init_connection():
