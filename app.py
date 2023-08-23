@@ -36,7 +36,7 @@ if option == 'Home':
     st.write("home")
 elif option == 'Topografi 2D':
     placeholder = st.empty()    
-while True:
+    while True:
         supabase = init_connection()
         rows = run_query()
         rows = rows.model_dump_json()
