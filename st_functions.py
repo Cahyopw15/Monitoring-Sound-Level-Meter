@@ -36,7 +36,7 @@ def st_button(icon, url, label, iconsize):
                 {label}
             </a>
         </p>''' 
-    elif icon == 'medium':
+    #elif icon == 'medium':
         button_code = f'''
         <p>
             <a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
@@ -46,31 +46,31 @@ def st_button(icon, url, label, iconsize):
                 {label}
             </a>
         </p>'''
-    elif icon == 'newsletter':
-        button_code = f'''
-        <p>
-            <a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width={iconsize} height={iconsize} fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                </svg>
+    #elif icon == 'newsletter':
+        #button_code = f'''
+        #<p>
+            #<a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
+                #<svg xmlns="http://www.w3.org/2000/svg" width={iconsize} height={iconsize} fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    #<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                #</svg>
+                #{label}
+            #</a>
+        #</p>'''
+    #elif icon == 'cup':
+        #button_code = f'''
+        #<p>
+            #<a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
+                #<svg xmlns="http://www.w3.org/2000/svg" width={iconsize} height={iconsize} fill="currentColor" class="bi bi-cup-fill" viewBox="0 0 16 16">
+                    #<path d="M1 2a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1h.5A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-.55a2.5 2.5 0 0 1-2.45 2h-8A2.5 2.5 0 0 1 1 12.5V2zm13 10h.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5H14v8z"/>
+                #</svg>
+                #{label}
+            #</a>
+        #</p>'''
+    #elif icon == '':
+        #button_code = f'''
+        #<p>
+            #<a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
                 {label}
-            </a>
-        </p>'''
-    elif icon == 'cup':
-        button_code = f'''
-        <p>
-            <a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width={iconsize} height={iconsize} fill="currentColor" class="bi bi-cup-fill" viewBox="0 0 16 16">
-                    <path d="M1 2a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1h.5A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-.55a2.5 2.5 0 0 1-2.45 2h-8A2.5 2.5 0 0 1 1 12.5V2zm13 10h.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5H14v8z"/>
-                </svg>
-                {label}
-            </a>
-        </p>'''
-    elif icon == '':
-        button_code = f'''
-        <p>
-            <a href={url} class="btn btn-outline-primary btn-lg btn-block" type="button" aria-pressed="true">
-                {label}
-            </a>
-        </p>'''
+            #</a>
+        #</p>'''
     return st.markdown(button_code, unsafe_allow_html=True)
