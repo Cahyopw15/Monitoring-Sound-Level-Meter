@@ -35,6 +35,7 @@ option = st.sidebar.selectbox(
 if option == 'Home':
     st.write("home")
 elif option == 'Monitoring Kebisingan':
+    st.image("Logo_UnivLampung.png", width = 50)
     st.title("Real-Time Monitoring Kebisingan Dashboard")
     placeholder = st.empty()    
     while True:
@@ -75,7 +76,8 @@ elif option == 'Monitoring Kebisingan':
 elif option == 'About':
     col11,col12, coll13 = st.columns(3)
     with col12 :
-        st.image("Logo_UnivLampung.png", caption='Cahyo Prasetiyo Wibowo', width = 120)
+        st.image("Logo_UnivLampung.png" , width = 120)
+        st.header('Cahyo Prasetiyo Wibowo')
     
 def open(url):
     open_script= """
