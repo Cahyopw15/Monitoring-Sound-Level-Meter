@@ -34,6 +34,9 @@ option = st.sidebar.selectbox(
 )
 if option == 'Home':
     st.write("home")
+elif option == 'About':
+    col11,col12, coll13 = st.columns(3)
+    col12.image(Image.open('Logo_UnivLampung.png'))
     
 def open(url):
     open_script= """
@@ -85,9 +88,7 @@ while True:
                 st.write("Not Enough Data!")
         time.sleep(1)
 
-elif option == 'About':
-    col11,col12, coll13 = st.columns(3)
-    col2.image(Image.open('Logo_UnivLampung.png'))
+
 
         
 
