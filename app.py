@@ -28,9 +28,9 @@ def convert_dict_to_df(data):
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
-    ('📋 Monitoring Kebisingan','📝 About')
+    ('📊 Project','📝 About')
 )
-if option == 'Monitoring Kebisingan':
+if option == '📊 Project':
     st.image("Logo_UnivLampung.png", width = 50)
     st.title("Real-Time Monitoring Pola Kebisingan Dashboard")
     placeholder = st.empty()    
@@ -85,7 +85,7 @@ if option == 'Monitoring Kebisingan':
             with placeholder.container():
                 st.write("Not Enough Data!")
         time.sleep(1)
-elif option == 'About':
+elif option == '📝 About':
     col11,col12, coll13 = st.columns(3)
     load_css()
     col1, col2, col3 = st.columns(3)
