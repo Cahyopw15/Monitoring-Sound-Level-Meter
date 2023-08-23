@@ -65,8 +65,7 @@ elif option == 'Monitoring Kebisingan':
                             titleside='right',
                             titlefont=dict(
                                 size=14,
-                                family='Arial, sans-serif'))
-                                      )
+                                family='Arial, sans-serif')))
                 for j in range(4):
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
