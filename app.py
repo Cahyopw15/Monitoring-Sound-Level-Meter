@@ -27,7 +27,6 @@ def convert_dict_to_df(data):
     return df
     
 
-
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
@@ -60,7 +59,13 @@ elif option == 'Monitoring Kebisingan':
                                 color = 'black',
                         )
                      ) , 
-                    colorscale = colorscale )
+                    colorscale = colorscale , 
+                        colorbar=dict(
+                            title='Color bar title', # title here
+                            titleside='right',
+                            titlefont=dict(
+                                size=14,
+                                family='Arial, sans-serif'))
                                       )
                 for j in range(4):
                     for k in range(4):
