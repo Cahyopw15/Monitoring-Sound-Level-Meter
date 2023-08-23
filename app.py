@@ -67,12 +67,14 @@ elif option == 'Topografi 2D':
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
                 fig_surface.update_layout(width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
-
         else:
             with placeholder.container():
                 st.write("Not Enough Data!")
         time.sleep(1)
-
+elif option == 'About':
+    col11,col12, coll13 = st.columns(3)
+    col12.image(Image.open('Logo_UnivLampung.png'))
+    
 def open(url):
     open_script= """
         <script type="text/javascript">
