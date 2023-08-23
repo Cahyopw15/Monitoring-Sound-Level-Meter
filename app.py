@@ -77,7 +77,6 @@ elif option == 'Monitoring Kebisingan':
 elif option == 'About':
     col11,col12, coll13 = st.columns(3)
     load_css()
-    st.write("[![Star](https://img.shields.io/github/stars/dataprofessor/links.svg?logo=github&style=social)](https://gitHub.com/dataprofessor/links)")
     col1, col2, col3 = st.columns(3)
     col2.image(Image.open('dp.png'))
     
@@ -87,7 +86,7 @@ elif option == 'About':
         
     icon_size = 20
 
-    st_button('Instagram', 'https://youtube.com/dataprofessor', 'Data Professor YouTube channel', icon_size)
+    st_button('Instagram', 'https://instagram.com/cahyoprasetiyowibowo?igshid=OGQ5ZDc2ODk2ZA==', 'Instagram', icon_size)
     st_button('Gmail', 'https://youtube.com/codingprofessor', 'Coding Professor YouTube channel', icon_size)
     st_button('Github', 'https://data-professor.medium.com/', 'Read my Blogs', icon_size)
     #st_button('twitter', 'https://twitter.com/thedataprof/', 'Follow me on Twitter', icon_size)
