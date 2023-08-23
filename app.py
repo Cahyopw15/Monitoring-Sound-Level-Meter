@@ -25,16 +25,17 @@ def convert_dict_to_df(data):
     df = pd.DataFrame.from_dict(data)
     return df
     
-st.title("Real-Time Monitoring Kebisingan Dashboard")
+
 
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
-    ('Home','Topografi 2D','About')
+    ('Home','Monitoring Kebisingan','About')
 )
 if option == 'Home':
     st.write("home")
-elif option == 'Topografi 2D':
+elif option == 'Monitoring Kebisingan':
+    st.title("Real-Time Monitoring Kebisingan Dashboard")
     placeholder = st.empty()    
     while True:
         supabase = init_connection()
@@ -73,7 +74,7 @@ elif option == 'Topografi 2D':
         time.sleep(1)
 elif option == 'About':
     col11,col12, coll13 = st.columns(3)
-    col12.image(Image.open('Logo_UnivLampung.png'))
+    col12.image(Image.open('Logo_UnivLampung.png', width = 100))
     
 def open(url):
     open_script= """
@@ -82,9 +83,7 @@ def open(url):
         </script>
     """ % (url)
     html(open_script)
-st.sidebar.button('Instagram', on_click=open, args=('https://instagram.com/',))
-st.sidebar.button('Email')
-st.sidebar.button('Github')
+st.sidebar.button('Instagram', 'Email', 'Github')
 
 
 
