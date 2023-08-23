@@ -81,7 +81,7 @@ elif option == 'About':
     col1, col2, col3 = st.columns(3)
     col2.image(Image.open('dp.png'))
     
-    st.st.markdown("<h1 style='text-align: center; color: black;'>Cahyo Prasetiyo Wibowo</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>Cahyo Prasetiyo Wibowo</h1>", unsafe_allow_html=True)
     
     st.info('Developer Advocate, Content Creator and ex-Professor with an interest in Data Science and Bioinformatics')
         
