@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 from supabase import create_client, Client
 import json
 from streamlit.components.v1 import html
+from PIL import Image
 
 st.image("Logo_UnivLampung.png", width = 50)
 
@@ -42,8 +43,8 @@ def open(url):
     """ % (url)
     html(open_script)
 st.sidebar.button('Instagram', on_click=open, args=('https://instagram.com/',))
-st.sidebar.subheader('Email')
-st.sidebar.subheader('Github')
+st.sidebar.button('Email')
+st.sidebar.button('Github')
 
 
 placeholder = st.empty()    
@@ -84,6 +85,10 @@ while True:
                 st.write("Not Enough Data!")
         time.sleep(1)
 
+elif option == 'About':
+    col11,col12, coll13 = st.columns(3)
+    col2.image(Image.open('Logo_UnivLampung.png'))
 
+        
 
      
