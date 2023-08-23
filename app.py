@@ -34,23 +34,8 @@ option = st.sidebar.selectbox(
 )
 if option == 'Home':
     st.write("home")
-elif option == 'About':
-    col11,col12, coll13 = st.columns(3)
-    col12.image(Image.open('Logo_UnivLampung.png'))
-    
-def open(url):
-    open_script= """
-        <script type="text/javascript">
-            window.open('%s', '_blank'.focus();
-        </script>
-    """ % (url)
-    html(open_script)
-st.sidebar.button('Instagram', on_click=open, args=('https://instagram.com/',))
-st.sidebar.button('Email')
-st.sidebar.button('Github')
-
-
-placeholder = st.empty()    
+elif option == 'Topografi 2D':
+    placeholder = st.empty()    
 while True:
         supabase = init_connection()
         rows = run_query()
@@ -87,6 +72,24 @@ while True:
             with placeholder.container():
                 st.write("Not Enough Data!")
         time.sleep(1)
+    
+elif option == 'About':
+    col11,col12, coll13 = st.columns(3)
+    col12.image(Image.open('Logo_UnivLampung.png'))
+    
+def open(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank'.focus();
+        </script>
+    """ % (url)
+    html(open_script)
+st.sidebar.button('Instagram', on_click=open, args=('https://instagram.com/',))
+st.sidebar.button('Email')
+st.sidebar.button('Github')
+
+
+
 
 
 
