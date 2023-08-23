@@ -67,7 +67,7 @@ elif option == 'Monitoring Kebisingan':
                 for j in range(4):
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
-                fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.90, "font": {"size":18}}} ,
+                fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
