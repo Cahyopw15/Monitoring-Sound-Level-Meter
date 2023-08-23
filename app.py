@@ -52,7 +52,6 @@ elif option == 'Monitoring Kebisingan':
                     go.Contour(
                         z = z, 
                         contours = dict(
-                            title='Pola Kebisingan 2D',
                             coloring ='heatmap',
                             showlabels = True,
                             labelfont = dict(
@@ -68,7 +67,7 @@ elif option == 'Monitoring Kebisingan':
                 for j in range(4):
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
-                fig.update_layout(margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
+                fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.5, "y":0.85, "font": {"size":15}}} ,margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale)])
                 fig_surface.update_layout(width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
