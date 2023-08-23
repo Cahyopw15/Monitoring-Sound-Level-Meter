@@ -29,12 +29,9 @@ def convert_dict_to_df(data):
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
-    ('Home','Monitoring Kebisingan','About')
+    ('Monitoring Kebisingan','About')
 )
-if option == 'Home':
-    st.image("Logo_UnivLampung.png", width = 50)
-    st.write("home")
-elif option == 'Monitoring Kebisingan':
+if option == 'Monitoring Kebisingan':
     st.image("Logo_UnivLampung.png", width = 50)
     st.title("Real-Time Monitoring Pola Kebisingan Dashboard")
     placeholder = st.empty()    
