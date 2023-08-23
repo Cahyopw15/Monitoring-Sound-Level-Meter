@@ -63,7 +63,7 @@ elif option == 'Monitoring Kebisingan':
                             titleside='right',
                             titlefont=dict(
                                 size=14,
-                                family='Times New Roman, sans-serif'))))
+                                family='Extra Bold, sans-serif'))))
                 for j in range(4):
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
@@ -76,7 +76,7 @@ elif option == 'Monitoring Kebisingan':
                                                             titleside='right',
                                                             titlefont=dict(
                                                                 size=14,
-                                                                family='Times New Roman, sans-serif')))])
+                                                                family='Extra Bold, sans-serif')))])
                 fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.28, "y":0.85, "font": {"size":18}}},
                 width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
