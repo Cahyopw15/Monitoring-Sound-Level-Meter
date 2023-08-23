@@ -78,7 +78,7 @@ elif option == 'About':
     col11,col12, coll13 = st.columns(3)
     load_css()
     col1, col2, col3 = st.columns(3)
-    col2.image(Image.open('dp.png'))
+    col2.image(Image.open('https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ADefault_pfp.svg&psig=AOvVaw2olpayGVm9-nAfh6xdBu2-&ust=1692855866261000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOCW09eJ8oADFQAAAAAdAAAAABAE'))
     
     st.markdown("<h1 style='text-align: center; color:#2F4F4F;'>Cahyo Prasetiyo Wibowo</h1>", unsafe_allow_html=True)
     
