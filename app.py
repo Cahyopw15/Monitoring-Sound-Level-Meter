@@ -74,7 +74,9 @@ elif option == 'Monitoring Kebisingan':
         time.sleep(1)
 elif option == 'About':
     col11,col12, coll13 = st.columns(3)
-    col12.image(Image.open('Logo_UnivLampung.png', width = 100))
+    with col12 :
+        img = (Image.open('Logo_UnivLampung.png')
+        st.image(img, caption='Cahyo Prasetiyo Wibowo', width 120)
     
 def open(url):
     open_script= """
@@ -83,7 +85,9 @@ def open(url):
         </script>
     """ % (url)
     html(open_script)
-st.sidebar.button('Instagram', 'Email', 'Github')
+st.sidebar.button('Instagram')
+st.sidebar.button('Email')
+st.sidebar.button('Github')
 
 
 
