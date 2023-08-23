@@ -82,7 +82,7 @@ elif option == 'About':
     
     st.markdown("<h1 style='text-align: center; color: black;'>Cahyo Prasetiyo Wibowo</h1>", unsafe_allow_html=True)
     
-    st.info('Developer Advocate, Content Creator and ex-Professor with an interest in Data Science and Bioinformatics')
+    st.info('Pembuat Konten Mengenai Dashboard Monitoring Kebisingan')
         
     icon_size = 20
 
