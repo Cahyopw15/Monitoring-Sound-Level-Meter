@@ -52,6 +52,7 @@ elif option == 'Monitoring Kebisingan':
                     go.Contour(
                         z = z, 
                         contours = dict(
+                            title='Pola Kebisingan 2D',
                             coloring ='heatmap',
                             showlabels = True,
                             labelfont = dict(
