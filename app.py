@@ -77,7 +77,7 @@ elif option == 'Monitoring Kebisingan':
                                                             titlefont=dict(
                                                                 size=14,
                                                                 family='Arial, sans-serif')))])
-                fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.1, "y":0.75, "font": {"size":18}}},
+                fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}},
                 width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
         else:
