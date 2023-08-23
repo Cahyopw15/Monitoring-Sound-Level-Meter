@@ -72,7 +72,6 @@ while True:
             with placeholder.container():
                 st.write("Not Enough Data!")
         time.sleep(1)
-    
 elif option == 'About':
     col11,col12, coll13 = st.columns(3)
     col12.image(Image.open('Logo_UnivLampung.png'))
