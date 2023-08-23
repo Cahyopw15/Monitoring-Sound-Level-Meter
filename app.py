@@ -25,11 +25,10 @@ def convert_dict_to_df(data):
     df = pd.DataFrame.from_dict(data)
     return df
     
-st.topbar.header('ll')
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
-    ('Monitoring Kebisingan','About')
+    ('📋 Monitoring Kebisingan','📝 About')
 )
 if option == 'Monitoring Kebisingan':
     st.image("Logo_UnivLampung.png", width = 50)
