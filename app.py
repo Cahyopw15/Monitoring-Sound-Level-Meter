@@ -80,7 +80,7 @@ elif option == 'About':
     col1, col2, col3 = st.columns(3)
     col2.image(Image.open('dp.png'))
     
-    st.markdown("<h1 style='text-align: center; color: black;'>Cahyo Prasetiyo Wibowo</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: Light Sea Green;'>Cahyo Prasetiyo Wibowo</h1>", unsafe_allow_html=True)
     
     st.info('Pembuat Konten Mengenai Dashboard Monitoring Kebisingan')
         
