@@ -56,16 +56,14 @@ elif option == 'Monitoring Kebisingan':
                             showlabels = True,
                             labelfont = dict(
                                 size = 10,
-                                color = 'black',
-                        )
-                     ) , 
-                    colorscale = colorscale , 
-                    colorbar=dict(
-                        title='Color bar title', # title here
-                        titleside='right',
-                        titlefont=dict(
-                            size=14,
-                            family='Arial, sans-serif')))
+                                color = 'black')) , 
+                        colorscale = colorscale , 
+                        colorbar=dict(
+                            title='Color bar title', # title here
+                            titleside='right',
+                            titlefont=dict(
+                                size=14,
+                                family='Arial, sans-serif')))
                 for j in range(4):
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
