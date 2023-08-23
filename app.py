@@ -25,7 +25,7 @@ def convert_dict_to_df(data):
     df = pd.DataFrame.from_dict(data)
     return df
     
-
+st.topbar('ll')
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
@@ -69,6 +69,7 @@ if option == 'Monitoring Kebisingan':
                 fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
+
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
                                                         colorbar=dict(
                                                             title='Kebisingan (dB)', # title here
@@ -79,6 +80,8 @@ if option == 'Monitoring Kebisingan':
                 fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.28, "y":0.85, "font": {"size":18}}},
                                             width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
+
+                
         else:
             with placeholder.container():
                 st.write("Not Enough Data!")
