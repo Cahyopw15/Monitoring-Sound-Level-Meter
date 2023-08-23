@@ -10,7 +10,6 @@ from streamlit.components.v1 import html
 from PIL import Image
 from st_functions import st_button, load_css
 
-st.image("Logo_UnivLampung.png", width = 50)
 
 @st.cache_resource
 def init_connection():
@@ -33,10 +32,11 @@ option = st.sidebar.selectbox(
     ('Home','Monitoring Kebisingan','About')
 )
 if option == 'Home':
+    st.image("Logo_UnivLampung.png", width = 50)
     st.write("home")
 elif option == 'Monitoring Kebisingan':
     st.image("Logo_UnivLampung.png", width = 50)
-    st.title("Real-Time Monitoring Kebisingan Dashboard")
+    st.title("Real-Time Monitoring Pola Kebisingan Dashboard")
     placeholder = st.empty()    
     while True:
         supabase = init_connection()
@@ -78,7 +78,7 @@ elif option == 'Monitoring Kebisingan':
                                                                 size=14,
                                                                 family='Extra Bold, sans-serif')))])
                 fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.28, "y":0.85, "font": {"size":18}}},
-                width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
+                                            width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
         else:
             with placeholder.container():
