@@ -36,4 +36,4 @@ def st_button(icon, url, label, iconsize):
                 {label}
             </a>
         </p>'''
-return st.markdown(button_code, unsafe_allow_html=True)
+    return st.markdown(button_code, unsafe_allow_html=True)
