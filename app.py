@@ -25,7 +25,7 @@ def convert_dict_to_df(data):
     df = pd.DataFrame.from_dict(data)
     return df
     
-st.topbar('ll')
+st.topbar.header('ll')
 st.sidebar.header('Dashboard Monitoring Kebisingan')
 option = st.sidebar.selectbox(
     'Silakan pilih menu:',
