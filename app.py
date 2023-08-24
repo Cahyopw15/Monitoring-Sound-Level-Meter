@@ -68,9 +68,7 @@ if option == '📊 Project':
                 fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
-                with st.expander("See explanation"):
-                    st.write(\"\"\" The chart above shows some numbers I picked for you. I rolled actual dice for these, so they're *guaranteed* to be random.\"\"\")
-                    st.image("https://static.streamlit.io/examples/dice.jpg")
+                st.expander('penjelasan', expanded=False)
                 
                 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
