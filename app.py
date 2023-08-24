@@ -69,11 +69,11 @@ if option == '📊 Project':
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
         with st.expander("See explanation"):
-            st.write(\"\"\"
+            st.write("""
                The chart above shows some numbers I picked for you.
                I rolled actual dice for these, so they're *guaranteed* to 
                be random.
-               \"\"\")
+               """)
                 
                 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
