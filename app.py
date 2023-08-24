@@ -105,9 +105,6 @@ elif option == '📝 About':
     #st_button('newsletter', 'https://sendfox.com/dataprofessor/', 'Sign up for my Newsletter', icon_size)
     #st_button('cup', 'https://www.buymeacoffee.com/dataprofessor/', 'Buy me a Coffee', icon_size)
 
-with st.sidebar :
-   tombol = st.sidebar.button('Main Menu')
-
 
 
 
