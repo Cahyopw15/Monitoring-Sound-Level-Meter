@@ -70,8 +70,8 @@ if option == '📊 Project':
                 st.plotly_chart(fig, theme="streamlit") 
                 with st.expander("See explanation"):
                     st.write(\"\"\"
-                    The chart above shows some numbers I picked for you.
-                    I rolled actual dice for these, so they're *guaranteed* to be random.
+                        The chart above shows some numbers I picked for you.
+                        I rolled actual dice for these, so they're *guaranteed* to be random.
                     \"\"\")
                 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
