@@ -68,8 +68,25 @@ if option == '📊 Project':
                 fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
-                with st.expander("See explanation"):
+                st.markdown(
+                    '''
+                    <style>
+                    .streamlit-expanderHeader {
+                        background-color: white;
+                        color: black; # Adjust this for expander header color
+                    }
+                    .streamlit-expanderContent {
+                        background-color: white;
+                        color: black; # Expander content color
+                    }
+                    </style>
+                    ''',
+                    unsafe_allow_html=True
+                )
+                with st.expander("Detail Informasi"):
                     st.write("""
+                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.
+                       Adapun indikator
                        The chart above shows some numbers I picked for you.
                        I rolled actual dice for these, so they're *guaranteed* to 
                        be random.
