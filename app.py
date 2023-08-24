@@ -72,11 +72,11 @@ if option == '📊 Project':
                     '''
                     <style>
                     .streamlit-expanderHeader {
-                        background-color: coral;
+                        background-color: #87CEEB;
                         color: black; # Adjust this for expander header color
                     }
                     .streamlit-expanderContent {
-                        background-color: grey;
+                        background-color: #90EE90;
                         color: black; # Expander content color
                     }
                     </style>
