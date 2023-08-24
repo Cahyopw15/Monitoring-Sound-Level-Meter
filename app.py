@@ -68,7 +68,7 @@ if option == '📊 Project':
                 fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
-                expander = st.expander("See explanation")
+                st.expander("See explanation")
                 
                 
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
