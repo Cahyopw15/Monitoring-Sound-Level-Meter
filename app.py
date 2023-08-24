@@ -106,8 +106,7 @@ elif option == '📝 About':
     #st_button('cup', 'https://www.buymeacoffee.com/dataprofessor/', 'Buy me a Coffee', icon_size)
 
 with st.sidebar :
-   tombol = st.button('Main Menu',
-                      'loading')
+   tombol = st.sidebar.button('Main Menu')
 
 
 
