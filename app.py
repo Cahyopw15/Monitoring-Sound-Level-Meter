@@ -72,7 +72,7 @@ if option == '📊 Project':
                     '''
                     <style>
                     .streamlit-expanderHeader {
-                        background-color: #006400;
+                        background-color: #F0F8FF;
                         color: black; # Adjust this for expander header color
                         font-size : 35px;
                         font-family : Arial;
