@@ -90,10 +90,6 @@ if option == '📊 Project':
                 with st.expander("Detail Informasi"):
                     st.write("""
                        Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.
-                       Adapun indikator
-                       The chart above shows some numbers I picked for you.
-                       I rolled actual dice for these, so they're *guaranteed* to 
-                       be random.
                        """)
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
                                                         colorbar=dict(
@@ -105,6 +101,29 @@ if option == '📊 Project':
                 fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.28, "y":0.85, "font": {"size":18}}},
                                             width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
+                 st.markdown(
+                    '''
+                    <style>
+                    .streamlit-expanderHeader {
+                        background-color: #F0F8FF;
+                        color: black; # Adjust this for expander header color
+                        font-size : 35px;
+                        font-family : Arial;
+                    }
+                    .streamlit-expanderContent {
+                        background-color: #87CEEB;
+                        color: black; # Expander content color
+                        font-size : 20px;
+                        font-family : Arial;
+                    }
+                    </style>
+                    ''',
+                    unsafe_allow_html=True
+                )
+                with st.expander("Detail Informasi"):
+                    st.write("""
+                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.
+                       """)
 
                 
         else:
