@@ -51,7 +51,7 @@ if option == '📊 Project':
                             coloring ='heatmap',
                             showlabels = True,
                             labelfont = dict(
-                                size = 14,
+                                size = 12,
                                 color = 'black')) , 
                         colorscale = colorscale , 
                         colorbar=dict(
@@ -63,7 +63,7 @@ if option == '📊 Project':
                                 color = 'black'))))
                 for j in range(4):
                     for k in range(4):
-                        fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=16, font_color='black')
+                        fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=14, font_color='black')
                 fig.update_xaxes(visible = False)
                 fig.update_yaxes(visible = False)
                 fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
