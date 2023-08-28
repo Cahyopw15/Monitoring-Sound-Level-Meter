@@ -51,7 +51,7 @@ if option == '📊 Project':
                             coloring ='heatmap',
                             showlabels = True,
                             labelfont = dict(
-                                size = 10,
+                                size = 14,
                                 color = 'black')) , 
                         colorscale = colorscale , 
                         colorbar=dict(
@@ -59,7 +59,8 @@ if option == '📊 Project':
                             titleside='right',
                             titlefont=dict(
                                 size=14,
-                                family='Extra Bold, sans-serif'))))
+                                family='Extra Bold, sans-serif',
+                                color = 'black'))))
                 for j in range(4):
                     for k in range(4):
                         fig.add_annotation(x=j, y=k, text=str(z[j,k]), showarrow=False, font_size=10, font_color='black')
