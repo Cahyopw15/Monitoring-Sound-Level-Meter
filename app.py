@@ -43,7 +43,7 @@ if option == '📊 Project':
             with placeholder.container():
                 df = convert_dict_to_df(rows['data']).sort_values(by=["id_kebisingan"])
                 z = df.iloc[0:4, 1:5].values
-                st.write(z)
+                #st.write(z)
                 colorscale = [[0, 'darkviolet'], [0.5, 'yellowgreen'], [1, 'red']]
                 fig = go.Figure(data=
                     go.Contour(
