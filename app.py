@@ -92,6 +92,9 @@ if option == '📊 Project':
                 with st.expander("Detail Informasi"):
                     st.write("""
                        Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.
+                       Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.
+                       Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.
+                       Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya kecil.
                        """)
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
                                                         colorbar=dict(
