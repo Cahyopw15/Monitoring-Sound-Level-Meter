@@ -91,7 +91,7 @@ if option == '📊 Project':
                 )
                 with st.expander("Detail Informasi"):
                     st.write("""
-                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.
+                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.\n
                        Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.\n
                        Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.\n
                        Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya rendah.\n
@@ -128,7 +128,10 @@ if option == '📊 Project':
                 )
                 with st.expander("Detail Informasi"):
                     st.write("""
-                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.
+                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.\n
+                       Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.\n
+                       Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.\n
+                       Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya rendah.\n
                        """)
 
                 
