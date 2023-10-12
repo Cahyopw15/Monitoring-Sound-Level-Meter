@@ -17,7 +17,7 @@ def init_connection():
     key = st.secrets["supabase_key"]
     return create_client(url, key)
 
-@st.cache_data(ttl=15)
+@st.cache_resource(ttl=15)
 def run_query():
     return supabase.table("kebisingan3").select("*").order("id_kebisingan", desc=True).limit(4).execute()
 
