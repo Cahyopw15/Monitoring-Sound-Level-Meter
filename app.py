@@ -70,32 +70,32 @@ if option == '📊 Project':
                 fig.update_layout({"title":{"text":"<b>Pola Kebisingan 2 Dimensi</b>", "x":0.33, "y":0.85, "font": {"size":18}}} ,
                                   margin=dict(l=8, r=8, b=8, pad=8), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, theme="streamlit") 
-                st.markdown(
-                    '''
-                    <style>
-                    .streamlit-expanderHeader {
-                        background-color: #F0F8FF;
-                        color: black; # Adjust this for expander header color
-                        font-size : 35px;
-                        font-family : Arial;
-                    }
-                    .streamlit-expanderContent {
-                        background-color: #87CEEB;
-                        color: black; # Expander content color
-                        font-size : 20px;
-                        font-family : Arial;
-                    }
-                    </style>
-                    ''',
-                    unsafe_allow_html=True
-                )
-                with st.expander("Detail Informasi"):
-                    st.write("""
-                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.\n
-                       Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.\n
-                       Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.\n
-                       Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya rendah.\n
-                       """)
+                #st.markdown(
+                    #'''
+                    #<style>
+                    #.streamlit-expanderHeader {
+                        #background-color: #F0F8FF;
+                        #color: black; # Adjust this for expander header color
+                        #font-size : 35px;
+                        #font-family : Arial;
+                    #}
+                    #.streamlit-expanderContent {
+                        #background-color: #87CEEB;
+                        #color: black; # Expander content color
+                        #font-size : 20px;
+                        #font-family : Arial;
+                    #}
+                    #</style>
+                    #''',
+                    #unsafe_allow_html=True
+                #)
+                #with st.expander("Detail Informasi"):
+                    #st.write("""
+                       #Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.\n
+                       #Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.\n
+                       #Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.\n
+                       #Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya rendah.\n
+                       #""")
                 fig_surface = go.Figure(data=[go.Surface(z=z, colorscale=colorscale, 
                                                         colorbar=dict(
                                                             title='Kebisingan (dB)', # title here
@@ -107,32 +107,32 @@ if option == '📊 Project':
                 fig_surface.update_layout( {"title":{"text":"<b>Pola Kebisingan 3 Dimensi</b>", "x":0.28, "y":0.85, "font": {"size":18}}},
                                             width=500, height=500, autosize=False, margin=dict(l = 65 ,  r = 50 ,  b = 65 ,  pad = 90), plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_surface, theme="streamlit")
-                st.markdown(
-                    '''
-                    <style>
-                    .streamlit-expanderHeader {
-                        background-color: #F0F8FF;
-                        color: black; # Adjust this for expander header color
-                        font-size : 35px;
-                        font-family : Arial;
-                    }
-                    .streamlit-expanderContent {
-                        background-color: #87CEEB;
-                        color: black; # Expander content color
-                        font-size : 20px;
-                        font-family : Arial;
-                    }
-                    </style>
-                    ''',
-                    unsafe_allow_html=True
-                )
-                with st.expander("Detail Informasi"):
-                    st.write("""
-                       Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.\n
-                       Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.\n
-                       Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.\n
-                       Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya rendah.\n
-                       """)
+                #st.markdown(
+                    #'''
+                    #<style>
+                    #.streamlit-expanderHeader {
+                        #background-color: #F0F8FF;
+                        #color: black; # Adjust this for expander header color
+                        #font-size : 35px;
+                        #font-family : Arial;
+                    #}
+                    #.streamlit-expanderContent {
+                        #background-color: #87CEEB;
+                        #color: black; # Expander content color
+                        #font-size : 20px;
+                        #font-family : Arial;
+                    #}
+                    #</style>
+                    #''',
+                    #unsafe_allow_html=True
+                #)
+                #with st.expander("Detail Informasi"):
+                    #st.write("""
+                       #Gambar di atas merupakan hasil dari visualisasi tingkat kebisingan yang dihasilkan dari sensor suara.\n
+                      # Daerah yang berwarna merah merupakan daerah yang tingkat kebisingannya sangat tinggi.\n
+                       #Daerah yang berwarna hijau merupakan daerah yang tingkat kebisingannya normal.\n
+                      # Daerah yang berwarna biru merupakan daerah yang tingkat kebisingannya rendah.\n
+                       #""")
 
                 
         else:
