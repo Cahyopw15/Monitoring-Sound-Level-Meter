@@ -8,7 +8,7 @@ Notebook ini menyajikan langkah-langkah mulai dari pengumpulan data, analisis ek
 
 ## 🛠️ Teknologi yang Digunakan  
 - **Python**: Bahasa pemrograman utama.  
-- **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, dan lainnya (lihat bagian `Imports` di notebook).  
+- **Libraries**: Pandas, NumPy, Matplotlib, Seaborn.  
 - **Jupyter Notebook**: Untuk pengembangan dan dokumentasi analisis.  
 
 ## 📂 Struktur Proyek  
