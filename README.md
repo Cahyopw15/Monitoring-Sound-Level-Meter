@@ -30,12 +30,3 @@ Notebook ini menyajikan langkah-langkah mulai dari pengumpulan data, analisis ek
 4. **Rekomendasi**  
    - Memberikan saran berdasarkan hasil analisis untuk mengurangi kebisingan di tempat kerja.  
 
-## 📦 Cara Menjalankan Proyek  
-1. Pastikan Anda telah menginstal Python.  
-2. Clone repository ini:  
-   ```bash
-   git clone https://github.com/Cahyopw15/Monitoring-Sound-Level-Meter.git
-3. `cd Monitoring-Sound-Level-Meter`
-4. `pip install -r requirements.txt`
-5. `python app.py`
-
